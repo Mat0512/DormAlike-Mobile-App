@@ -1,5 +1,6 @@
-export const user = [
+const user = [
     {
+        userID: "1",
         username: "eric",
         email: "",
         phone: "",
@@ -12,6 +13,7 @@ export const user = [
         ],
     },
     {
+        userID: "2",
         username: "jay",
         email: "",
         phone: "",
@@ -24,6 +26,7 @@ export const user = [
         ],
     },
     {
+        userID: "3",
         username: "ally",
         email: "",
         phone: "",
@@ -36,10 +39,11 @@ export const user = [
         ],
     },
     {
+        userID: "4",
         username: "mat",
         email: "",
         phone: "",
-        password: "*****",
+        password: "mathewmendoza123456",
         reservation: [
             {
                 accomodationName: "",
@@ -48,6 +52,7 @@ export const user = [
         ],
     },
     {
+        userID: "5",
         username: "vanessa",
         email: "",
         phone: "",
@@ -60,3 +65,5 @@ export const user = [
         ],
     },
 ];
+
+module.exports = user;
