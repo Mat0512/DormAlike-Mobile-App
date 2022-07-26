@@ -1,6 +1,6 @@
 const user = [
     {
-        userID: "1",
+        userID: 1,
         username: "eric",
         email: "",
         phone: "",
@@ -13,7 +13,7 @@ const user = [
         ],
     },
     {
-        userID: "2",
+        userID: 2,
         username: "jay",
         email: "",
         phone: "",
@@ -26,7 +26,7 @@ const user = [
         ],
     },
     {
-        userID: "3",
+        userID: 3,
         username: "ally",
         email: "",
         phone: "",
@@ -39,7 +39,7 @@ const user = [
         ],
     },
     {
-        userID: "4",
+        userID: 4,
         username: "mat",
         email: "",
         phone: "",
@@ -52,7 +52,7 @@ const user = [
         ],
     },
     {
-        userID: "5",
+        userID: 5,
         username: "vanessa",
         email: "",
         phone: "",
