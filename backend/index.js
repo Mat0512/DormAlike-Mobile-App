@@ -1,40 +1,27 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
+const connectDB = require("./configs/databaseConnection.js");
+const verifyToken = require("./middleware/authMiddleware.js");
+const errorHandler = require("./middleware/errorMiddleware.js");
 
-require("dotenv").config();
-//middleware body parser
-// place this parser before the other route hundlers or otherwise contents in the body cant be used.
-
+const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-//post that has the availability status?
-app.get("/", (req, res) => {
-    res.send(accomodationData);
-});
-
-app.use("/accomodations", require("./routes/api/accomodations.js"));
 app.use("/signup", require("./routes/signup.js"));
 app.use("/login", require("./routes/login.js"));
-app.use("/edit-account", require("./routes/updateUser.js"));
+app.use(verifyToken);
+app.use("/accomodations", require("./routes/api/accomodations.js"));
+app.use("/editAccount", require("./routes/updateUser.js"));
+app.use("/addAccomodation", require("./routes/addAccomodation.js"));
+app.use("/editAccomodation", require("./routes/editAccomodation.js"));
+app.use("/deleteAccomodation", require("./routes/deleteAccomodation.js"));
+app.all("*", (req, res) => res.status(404).json({ error: "not found" }));
+app.use(errorHandler);
 
-app.listen((port = 3001), () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
-
-console.log(process.env.MONGODB_URI);
-
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const { Collection } = require("mongoose");
-const uri = process.env.MONGODB_URI;
-const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverApi: ServerApiVersion.v1,
-});
-client.connect((err) => {
-    const collection = client.db("test").collection("devices");
-    // perform actions on the collection object
-    console.log(Collection);
-    client.close();
+connectDB();
+app.listen(port, () => {
+    console.log(
+        `database connected, server running on http://localhost:${port}`
+    );
 });
