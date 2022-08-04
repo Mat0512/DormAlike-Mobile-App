@@ -1,0 +1,164 @@
+#logo {
+    display: block;
+    max-width: 170px;
+    max-height: auto;
+    margin: auto;
+}
+
+.card-accom {
+    background-color: #0C3B2E;
+    height: 110px;
+}
+
+#label-name-accom {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+#name-accom {
+    border-bottom: solid 2px white;
+    border-radius: 7px;
+    width: 310px;
+    height: 35px;
+    font-size: 15px;
+    margin: 7px auto 0px auto;
+    text-indent: 13px;
+    color: white;
+}
+
+.card-container {
+    border-top: 5px solid #0C3B2E;
+    background-color: #EEEEEE;
+}
+.container-1 {
+    width: 145px;
+    height: 200px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.container-2 {
+    width: 145px;
+    height: 200px;
+    float: right;
+}
+
+.post-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.label-facility {
+    font-size: 14px;
+    color: black;
+}
+
+.check-box {
+    --border-color: #404040;
+    --size: 17px;
+    --border-radius: 4px;   
+}
+.select {
+    border: solid 1px grey;
+    border-radius: 7px;
+    width: 152px;
+    height: 26px;
+    margin-left: 3px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    padding-left: 7px;
+}
+
+.container-3 {
+    width: 120px;
+    height: 135px;
+    float: left;
+    margin-left: 15px;
+}
+.container-4 {
+    width: 130px;
+    height: 135px;
+    float: right;
+    margin-right: 10px;
+}
+
+.container-5 {
+    margin: 15px;
+    color: black;
+}
+
+#return {
+    margin-top: 10px;
+    margin-left: 11px;
+    width: 38px;
+    height: 38px;
+}
+
+#return-box {
+    background-color: white;
+}
+
+.card-desc {
+    border: 2px solid #0C3B2E;
+    background-color: #EEEEEE;
+    height: 117px;
+}
+
+.card-owner-info {
+    border-bottom: 4px solid #0C3B2E;
+    background-color: #EEEEEE;
+}
+
+#desc {
+    border-radius: 5px;
+    height: 100px;
+    font-size: 15px;
+    margin-top: 10px;
+    text-indent: 13px;
+}
+ 
+#contact-no {
+    border: solid 1px grey;
+    border-radius: 6px;
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 17px;
+    text-indent: 13px;
+    color: black;
+}
+ 
+#fb {
+    border: solid 1px grey;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 15px;
+    text-indent: 13px;
+    color: black;
+}
+
+#save-post-button {
+    --border-width: 1px;
+    --border-radius: 25px;
+    --border-color: #ED7117;;
+    margin: 20px auto 30px auto;
+    width: 250px;
+    height: 40px;
+    color: #ED7117;
+    font-weight: bold;
+}
+
+.tab-info {
+    color: #404040;
+    font-size: 11px;
+}
+
+#highlight {
+    color: #fc6a03;
+}
+
+ion-content {
+    --background: #fcfbf4ab;
+}

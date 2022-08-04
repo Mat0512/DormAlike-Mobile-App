@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <div>
+    <div class="return-box">
+      
+    </div>
+
+    <div class="add-post-box">
+      <ion-button id= "add-post" [routerLink]="['/add-post-owner']" expand="block" fill="outline">Add Post</ion-button>
+    </div>
+  </div>
+  
+  <ion-searchbar id="searh-bar" showCancelButton="focus" placeholder="Search"></ion-searchbar>
+ 
+  <ion-card class="post-card">
+    <ion-card-content>
+      <div class="img-container">
+        <ion-img class= "image-post" src="assets/img/house1.jpg"></ion-img>
+      </div>
+ 
+      <div class="info-container">
+        <h1>Bourbon Bliss</h1>
+        <p><ion-icon name="pricetags"></ion-icon> 2 Reservation</p>
+        <p><ion-icon name="bed"></ion-icon> 3 Available Rooms</p>
+      </div>
+
+      <div class="button-container">
+        <ion-button id="view-as" [routerLink]="['/house-details1']" expand="block" fill="outline"> View As</ion-button>
+        <ion-button id="update" [routerLink]="['/add-post-owner']" expand="block" fill="outline"> Update </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

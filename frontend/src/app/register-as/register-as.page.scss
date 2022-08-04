@@ -1,0 +1,128 @@
+#logo {
+    display: block;
+    max-width: 180px;
+    max-height: auto;
+    margin: auto;
+}
+
+#back {
+    margin-left: 26px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+}
+
+.top-cont {
+    width: 375px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.back-cont {
+    float: left;
+}
+
+.skip-cont {
+    float: right;
+}
+
+#skip {
+    width: 75px;
+    height: 35px;
+    color: #FEA95E;
+    --border-color: #FEA95E;
+    --border-radius: 20px;
+    margin-right: 37px;
+}
+
+.regAs {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 225px;
+    background-color: #EEEEEE;
+    border-bottom: 3px solid #171717;
+}
+
+ion-card-title {
+    font-family: Cochin;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.regAsButton{
+    display: flex;
+}
+
+#clientReg {
+    width: 110px;
+    height: 80px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    --border-color: #D16002;
+    color: #D16002;
+}
+
+#ownerReg {
+    width: 110px;
+    height: 80px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    --border-color: #D16002;
+    color: #D16002;
+
+}
+
+p {
+    text-align: center;
+    font-family: Tahoma;
+}
+
+.legalNote {
+    margin-top: 60px;
+    font-family: 'Arial Narrow';
+}
+
+.bottom-cont {
+    width: 370px;
+    height: 50px;
+}
+
+.bottom-cont-1 {
+    width: 200px;
+    height: 50px;
+    float: left;
+    margin-left: 43px;
+}
+
+.bottom-cont-2 {
+    width: 60px;
+    height: 50px;
+    float: right;
+    margin-right: 65px;
+}
+
+#register {
+    color: rgb(8, 110, 8);
+}
+
+#policy {
+    font-size: 15px;
+    color: #502F0C;
+}
+
+#terms {
+    font-size: 15px;
+    color: #502F0C;
+}
+
+ion-content {
+    --background: #fcfbf4ab;
+}

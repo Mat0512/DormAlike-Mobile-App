@@ -1,0 +1,219 @@
+ion-menu-button {
+  color: #171717;
+}
+
+.card-home {
+  background-color: #EEEEEE;
+  border-top: 5px solid #c18c5d;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-img {
+  display: block;
+  max-width: 250px;
+  max-height: auto;
+  margin: auto;
+}
+
+#menu-account {
+  margin-top: 0px;
+  width: 375px;
+  display: flex;
+  padding-left: 5px;
+}
+
+#account {
+  margin-right: 6px;
+  width: 40px;
+  height: 40px;
+  color: #D15F20;
+  background-color: #fcfbf4ab;
+}
+
+#account-box {
+  background-color: white;
+}
+
+ion-searchbar {
+  width: 1500px;
+  margin-top: 6px;
+  --icon-color: #cc5500;
+    --background: #f4ab6a;
+    --cancel-button-color: rgb(255, 0, 0);
+    --placeholder-color: white;
+    --placeholder-opacity: 100%;
+    --border-radius: 6px;
+}
+
+#account {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+#intro {
+  text-align: justify;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.images {
+  padding-top: 12px;
+  padding-bottom: 0px;
+  width: 450px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+h5 {
+  font-family: Helvetica; 
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+#rating {
+  font-family: Tahoma;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+
+ion-card-title {
+  font-size: 23px;
+  text-align: left;
+}
+
+ion-card-subtitle {
+  text-align: left;
+}
+
+.address {
+  text-transform: capitalize;
+  font-family: Calibri;
+  color: brown;
+  font-size: 15px;
+}
+
+.rate-view-details {
+  width: 300px;
+  height: 45px;
+  margin-top: 5px;
+}
+
+.rate-view-details-2 {
+  float: left;
+  margin-top: 9px;
+}
+
+.rate-view-details-3 {
+  float: right;
+}
+
+.rent-starts {
+  font-size: 14px;
+  color: #404040;
+}
+
+.rent-price {
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.rent-price-2 {
+  float: left;
+  margin-top: 7px;
+}
+
+.rent-price-3 {
+  float: right;
+}
+
+.rent-php {
+  color: black;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+#stars{
+  color: gold;
+  width: 17px;
+  height: 17px;
+}
+
+.view-property {
+  font-size: 14px;
+  font-weight: bold;
+  width: 160px;
+  height: 37px;
+  --border-radius: 7px;
+  --border-color: white;
+  --background: #013220;
+  --color: white;
+}
+
+#scroll-up {
+  width: 90px;
+  height: 60px;
+  --border-color: white;
+  --background: white;
+  --background-activated: white;
+  margin-left: 270px;
+  margin-bottom: 30px;
+}
+
+#arrow {
+  font-size: 50px;
+  color: rgb(25, 78, 25);
+}
+
+ion-slides {
+  height: auto;
+  --bullet-background: black;
+  --bullet-background-active: rgb(255, 136, 0);
+  
+}
+
+ion-slide {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+#swipe {
+  font-size: 13px;
+  font-family: Tahoma;
+  font-weight: 100;
+}
+
+ion-content {
+  --background: #fcfbf4ab;
+}

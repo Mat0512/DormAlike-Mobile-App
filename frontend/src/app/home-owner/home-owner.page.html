@@ -1,0 +1,26 @@
+
+  <ion-tabs>
+    <ion-tab-bar  slot="bottom">
+      <ion-tab-button tab="home-owner" class="tab-info">
+        <ion-icon id="highlight" name="home-outline"></ion-icon>
+        <ion-label id="highlight">Home</ion-label>
+        <ion-badge>1</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="post-owner" class="tab-info">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Post</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile-owner" class="tab-info">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button class="tab-info" [routerLink]="['/get-started']">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+

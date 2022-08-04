@@ -1,0 +1,128 @@
+#logo {
+    display: block;
+    max-width: 130px;
+    max-height: auto;
+    margin: auto;
+}
+
+#back {
+    margin-left: 11px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+    margin-top: 55px;
+}
+
+ion-card {
+    --background: #F5F5F5;
+    border-left: 2px solid #466D1D;
+    
+}
+
+.icon {
+    color: #01796F;
+}
+
+#login {
+    text-align: center;
+    font-size: 25px;
+    color: #171717;
+    font-family: Arial;
+}
+
+.userName {
+    display: flex;
+    margin-top: 10px;
+}
+
+#name {
+    margin-left: 15px;
+    border: solid 1px grey;
+    border-radius: 7px;
+    width: 150px;
+    height: 38px;
+    font-size: 15px;
+    text-indent: 13px;
+    color: black;
+}
+
+.userPass {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#pass {
+    margin-left: 15px;
+    border: solid 1px grey;
+    border-radius: 7px;
+    width: 150px;
+    height: 38px;
+    font-size: 15px;
+    text-indent: 13px;
+    color: black;
+}
+
+#forgotpw {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: darkgoldenrod;
+}
+
+.rememberMe {
+    display: flex;
+}
+
+#rememberBox {
+    --border-radius: 5px;
+    --border-color: black;
+    --border-width: 2px;
+    --size: 20px;
+    margin-top: 18px;
+    margin-left: 3px;
+}
+
+#logIn {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    --border-radius: 6px;
+    font-size: 15px;
+    --border-color: #013220;
+    color: #013220;
+    width: 150px;
+    font-size: 16px;
+    
+}
+
+#or {
+    text-align: center;
+    font-size: 15px;
+    color: gray;
+}
+
+#new {
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: gray;
+}
+
+#register {
+    margin-left: 113px;
+    --border-radius: 6px;
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    --border-color: #D16002;
+    --color: #D16002;
+}
+
+ion-content {
+    --background: #fcfbf4ab;
+}

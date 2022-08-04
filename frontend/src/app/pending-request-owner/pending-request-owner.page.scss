@@ -1,0 +1,98 @@
+#back {
+    margin-left: 11px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+    margin-top: 25px;
+}
+
+ion-card {
+    border-left: 2px solid rgba(0, 0, 0, 0.459);
+    background-color: rgba(128, 128, 128, 0.082);
+}
+
+.req-cont {
+    width: 130px;
+    height: 140px;
+    float: left;
+}
+
+.req-cont-2 {
+    width: 170px;
+    height: 140px;
+    float: right;
+}
+
+.req-cont-3 {
+    border-top: 1px solid rgba(0, 0, 0, 0.459);
+    width: 303px;
+    height: 47px;
+    display: inline-block;
+}
+
+#accept {
+    width: 125px;
+    height: 30px;
+    --border-radius: 20px;
+    --border-color: rgb(36, 192, 132);
+    color: rgb(36, 192, 132);
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 24px;
+}
+
+#decline {
+    width: 125px;
+    height: 30px;
+    --border-radius: 20px;
+    --border-color: rgb(211, 82, 43);
+    color: rgb(211, 82, 43);
+    font-size: 14px;
+    margin-top: 8px;
+    
+}
+
+.req-info {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.req-info-1 {
+    color: black;
+    font-size: 14px;
+    padding-left: 1px;
+}
+
+.hname {
+    font-size: 16px;
+    color: rgb(47, 88, 63);
+    font-weight: bold;
+    font-family: Cambria;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.tab-info {
+    color: #404040;
+    font-size: 11px;
+}
+
+#highlight {
+    color: #fc6a03;
+}
+
+h1 {
+    font-family: Tahoma;
+    font-size: 23px;
+    margin-left: 15px;
+}
+
+ion-content {
+    --background: #fcfbf4ab;
+}

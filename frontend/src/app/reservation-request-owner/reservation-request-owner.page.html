@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-owner']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1>Reservation Request/s</h1>
+
+  <ion-card>
+    <ion-card-content>
+
+      <div class="req-cont">
+        <ion-img src="assets/img/house1.jpg"></ion-img>
+        <p class="hname"><ion-icon name="home-outline"></ion-icon> Bourbon Bliss</p>
+        
+      </div>
+      <div class="req-cont-2">
+        <p class="req-info">Client's Information</p>
+        <p class="req-info-1"><ion-icon name="person-outline"></ion-icon> Isaac Newton</p>
+        <p class="req-info-1"><ion-icon name="call-outline"></ion-icon> 0912-345-6789</p>
+        <p class="req-info-1"><ion-icon name="mail-outline"></ion-icon> isaacnewts@gmail.com</p>
+        <ion-button (click)="presentOnHold()" [routerLink]="['/pending-request-owner']" id="onhold" fill="outline">On Hold</ion-button>
+      </div>
+
+      <div class="req-cont-3">
+        <ion-button (click)="presentAccept()" [routerLink]="['/completed-reservation-owner']" id="accept" fill="outline">Accept</ion-button>
+        <ion-button (click)="presentDecline()" id="decline" fill="outline">Decline</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" class="tab-info">
+        <ion-icon id="highlight" name="home-outline"></ion-icon>
+        <ion-label id="highlight">Home</ion-label>
+        <ion-badge>10</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="post" class="tab-info">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Post</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile" class="tab-info">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="logout" class="tab-info">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

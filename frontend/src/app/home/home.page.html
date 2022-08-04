@@ -1,0 +1,1352 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DormAlike
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img src="assets/img/dormalike-logo-final.png"></ion-img>
+
+  <ion-header collapse="condense">
+    <div id="menu-account">
+      <ion-searchbar [(ngModel)]="searchTerm" animated showCancelButton="focus" cancelButtonText="Cancel" placeholder="Search"></ion-searchbar>
+
+      <ion-buttons>
+        <button id="account-box" ion-button [routerLink]="['/get-started']">
+          <ion-icon id="account" size="large" name="person-circle-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+    </div>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>DormAlike</ion-card-title>
+      <ion-card-subtitle>feels like your own home</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content id="intro">
+      The DormAlike is a mobile marketplace app which contains the different boarding houses in Golden Country Homes, Alangilan, Batangas City.
+    </ion-card-content>
+  </ion-card>
+
+  <h5>Find A Home</h5>
+  <!-- <h5 id="swipe"><i>Swipe to right to browse other houses. <ion-icon size="default" name="arrow-forward-outline"></ion-icon></i></h5> -->
+
+    <ion-card class="card-home" *ngFor = "let info of house | filter:searchTerm">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na1']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house2.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Hotel De La Cruise</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na2']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house3.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>The Venetian</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na3']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house4.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Peninsula</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na4']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house5.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>The Palazzo</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na5']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house6.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>The Riverwood</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na6']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house7.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Serene Stay</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na7']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house8.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Grand Hyatt</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na8']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house9.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Roosevelt</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na9']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house10.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Villa Florence</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,500</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/home/house-na10']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house11.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Green Acres</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house12.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Country Charm</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 4,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house13.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Tranquil Acres</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house14.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Park Grand London</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house15.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Silver Sun</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house16.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Downtown</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house17.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Bella View Lounge</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house18.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Chestnut Tree</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house19.png"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Astro</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house20.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Lucky Rabbit B&B</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house21.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Home Away From Home</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house22.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Houstonian</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house23.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Giraffe Manor</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house24.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Serene Horizons</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house25.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Dreamland</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house26.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Eternity</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house27.png"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Hotel Grizzly</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house28.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Cape Grace</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house29.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Scarlet House</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house30.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Goldberg</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house31.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Est Hem</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house32.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Silversmith</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house33.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Like Home</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house34.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Standard High Line</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house35.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Lexington</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 1,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house36.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Slumber Falls</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 1,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house37.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Primland</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house38.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Hoxton</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house39.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Royal Orbit</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 1,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house40.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Manhattan</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house41.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Sunny Canopy</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house42.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Millennium Times Square</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 3,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house43.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Duke Rooms</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house44.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Happy Stay</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house45.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Enchanted Isle</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 1,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house46.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The St. Mathew</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house47.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Ivy Bloom Homes</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house48.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>The Daniels Balcony</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,000</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house49.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Knights of Eric</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 2,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home">
+      <ion-img class="images" src="assets/img/house50.jpg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>Lilies Pad</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">Php 1,500</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.0 Homey-rating</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" (click)="presentReminder()" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+  </ion-slides> -->
+
+  <ion-button id="scroll-up" (click)="scrollToTop()" expand="block">
+    <ion-icon id="arrow" name="arrow-up-circle-sharp"></ion-icon>
+  </ion-button>
+
+</ion-content>

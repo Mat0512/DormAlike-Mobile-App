@@ -1,0 +1,104 @@
+.side-menu {
+    overflow: hidden;
+    position: fixed;
+    --ion-background-color: none;
+}
+
+.person {
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    height: 125px;
+    background-color: #212e4b;
+}
+
+.person-icon {
+    float: left;
+    margin-top: 12px;
+}
+
+#person-icon-circle{
+    width: 80px;
+    height: 80px;
+    padding-top: 11px;
+    padding-left: 15px;
+    color: #D15F20;
+}
+
+.person-info {
+    float: right;
+    margin-top: 42px;
+    margin-right: 40px;
+}
+
+#client-name {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+#client-email {
+    font-size: 14px;
+    color: #EEEEEE;
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    --background: none;
+    --background-activated: none;
+    color: #171717;
+    height: 30px;
+    font-size: 17px;
+    font-family: Tahoma;
+    margin: 0;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.button1 {
+    --background: none;
+    --background-activated: none;
+    color: white;
+    height: 30px;
+    font-size: 17px;
+    font-family: Tahoma;
+    margin: 0;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+}
+
+.option-icons {
+    color: #014421;
+}
+
+.option-icons-2 {
+    color: #e36414;
+}
+
+.logout-container {
+    border: 2px white solid;
+    border-radius: 10px;
+    margin-top: 150px;
+    background-color: #212e4b;
+    height: 59px;
+}
+
+#client-logout {
+    padding-top: 8px;
+    font-size: 16px;
+    font-family: Tahoma;
+    color: white;
+}
+
+#logout-icon {
+    padding-top: 8px;
+    color: #e36414;
+}

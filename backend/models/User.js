@@ -6,7 +6,7 @@ const userSchema = new Schema({
     lastname: String,
     username: String,
     password: String,
-    phone: [String],
+    phone: String,
     email: String,
     preference: [{ type: Schema.Types.ObjectId, ref: "Accomodation" }],
     reservation: [

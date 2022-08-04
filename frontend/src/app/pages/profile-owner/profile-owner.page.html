@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-owner']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1 id="title-prof"><ion-icon size="default" name="person-sharp"></ion-icon> Profile</h1>
+
+  <div class="card-prof-1">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> Name</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">Thomas Edison</ion-text>
+      </div>
+      
+  </div>
+
+  <div class="card-prof-2">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> Username</ion-text>
+      <div class="infos">
+      <ion-text class="text-info">thomas</ion-text>
+      </div>
+  </div>
+
+  <div class="card-prof-3">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="call-outline"></ion-icon> Contact Number</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">0912-345-6789</ion-text>
+      </div>
+      
+  </div>
+
+  <div class="card-prof-4">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="mail-outline"></ion-icon> Email</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">thomased@gmail.com</ion-text>
+      </div>
+  </div>
+
+  <div class="card-prof-5">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="eye-off-outline"></ion-icon> Password</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">••••••••</ion-text>
+      </div>
+      
+  </div>
+
+  <ion-button id="edit-prof" [routerLink]="['/edit-profile-owner']" fill="outline">Edit Profile</ion-button>
+</ion-content>
+

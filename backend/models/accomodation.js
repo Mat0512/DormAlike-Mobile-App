@@ -4,9 +4,12 @@ const { Schema } = mongoose;
 const accomodationSchema = new Schema({
     ownedBy: { type: Schema.Types.ObjectId, ref: "User" },
     name: String,
+    address: String,
+    roomCount: Number,
+    houseimg: { type: String, default: "" },
+    roomAvailable: Number,
     category: String,
     reservationFee: Number,
-    occupancy: Number,
     monthlyFee: Number,
     phone: [String],
     space: Number,

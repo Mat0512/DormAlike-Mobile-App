@@ -1,0 +1,170 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+
+  <ion-buttons>
+    <button id="return-box" ion-button [routerLink]="['/home-owner/tabs/post-owner']">
+      <ion-icon id="return" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-card class="card-accom">
+    <ion-card-content>
+      <ion-label id="label-name-accom"><ion-icon size="small" name="home-sharp"></ion-icon> Name of Accomodation</ion-label>
+      <ion-input id="name-accom" type="text"></ion-input>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="card-container">
+    <ion-card-content>
+      <div class="container-1">
+        <ion-label class="post-title"><ion-icon size="small" name="list-outline"></ion-icon> Category</ion-label>
+        <ion-select class="select" placeholder="Select category">
+          <ion-select-option value="bed">Bed Space</ion-select-option>
+          <ion-select-option value="room">Room Rent</ion-select-option>
+          <ion-select-option value="house">House Rent</ion-select-option>
+        </ion-select>
+     
+        <ion-label class="post-title"><ion-icon size="small" name="pricetags-outline"></ion-icon> Reservation Fee</ion-label>
+        <ion-select class="select" placeholder="Select reservation fee">
+          <ion-select-option value="one">PHP 1,000</ion-select-option>
+          <ion-select-option value="one-five">PHP 1,500</ion-select-option>
+          <ion-select-option value="two">PHP 2,000</ion-select-option>
+          <ion-select-option value="two-five">PHP 2,500</ion-select-option>
+          <ion-select-option value="three">PHP 3,000</ion-select-option>
+        </ion-select>
+     
+        <ion-label class="post-title"><ion-icon size="small" name="cash-outline"></ion-icon> Monthly Fee</ion-label>
+        <ion-select class="select" placeholder="Select monthly fee">
+          <ion-select-option value="one">PHP 1,000</ion-select-option>
+          <ion-select-option value="one-five">PHP 1,500</ion-select-option>
+          <ion-select-option value="two">PHP 2,000</ion-select-option>
+          <ion-select-option value="two-five">PHP 2,500</ion-select-option>
+          <ion-select-option value="three">PHP 3,000</ion-select-option>
+          <ion-select-option value="three-five">PHP 3,500</ion-select-option>
+          <ion-select-option value="four">PHP 4,000</ion-select-option>
+          <ion-select-option value="four-five">PHP 4,500</ion-select-option>
+          <ion-select-option value="five">PHP 5,000</ion-select-option>
+        </ion-select>
+      </div>
+     
+      <div class="container-2">
+        <ion-label class="post-title"><ion-icon size="small" name="bed-outline"></ion-icon> Room Count</ion-label>
+        <ion-select class="select" placeholder="Select number of rooms">
+          <ion-select-option value="one-roomc">1 Room</ion-select-option>
+          <ion-select-option value="two-roomc">2 Rooms</ion-select-option>
+          <ion-select-option value="three-roomc">3 Rooms</ion-select-option>
+          <ion-select-option value="four-roomc">4 Rooms</ion-select-option>
+          <ion-select-option value="five-roomc">5 Rooms</ion-select-option>
+          <ion-select-option value="six-roomc">6 Rooms</ion-select-option>
+          <ion-select-option value="seven-roomc">7 Rooms</ion-select-option>
+        </ion-select>
+     
+        <ion-label class="post-title"><ion-icon size="small" name="bed"></ion-icon> Room Available</ion-label>
+        <ion-select class="select" placeholder="Select number of available rooms">
+          <ion-select-option value="one-roomav">1 Room</ion-select-option>
+          <ion-select-option value="two-roomav">2 Rooms</ion-select-option>
+          <ion-select-option value="three-roomav">3 Rooms</ion-select-option>
+          <ion-select-option value="four-roomav">4 Rooms</ion-select-option>
+          <ion-select-option value="five-roomav">5 Rooms</ion-select-option>
+          <ion-select-option value="six-roomav">6 Rooms</ion-select-option>
+          <ion-select-option value="seven-roomav">7 Rooms</ion-select-option>
+        </ion-select>
+     
+        <ion-label class="post-title"><ion-icon size="small" name="home-outline"></ion-icon> Space</ion-label>
+        <ion-input class="select" type="text"></ion-input>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="card-container">
+    <ion-card-content>
+      <div class="container-3">
+        <p class="post-title">Facilities</p>
+    
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Wifi <ion-icon size="small" name="wifi"></ion-icon></ion-label><br>
+      
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Study Area <ion-icon size="small" name="book"></ion-icon></ion-label><br>
+      
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> CCTV <ion-icon size="small" name="camera"></ion-icon></ion-label><br>
+      
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Parking <ion-icon size="small" name="car-sport"></ion-icon></ion-label>
+      </div>
+    
+      <div class="container-4">
+        <br>
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Kitchen <ion-icon size="small" name="fast-food"></ion-icon></ion-label><br>
+      
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Laundry Area <ion-icon size="small" name="water"></ion-icon></ion-label><br>
+      
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Wardrobe <ion-icon name="body"></ion-icon></ion-label><br>
+      
+        <ion-checkbox class="check-box" disabled="false"></ion-checkbox>
+        <ion-label class="label-facility"> Restroom <ion-icon name="body-outline"></ion-icon></ion-label>
+      </div>
+    </ion-card-content>
+  </ion-card>
+    
+  <ion-card class="card-desc">
+    <div class="container-5">
+      <ion-label class="post-title">Description</ion-label>
+      <ion-textarea id="desc" placeholder="Enter description here..." required="true" autocapitalize="on"></ion-textarea>
+    </div>
+  </ion-card>
+ 
+  <ion-card class="card-owner-info">
+    <ion-card-content>
+      <div class="container-6">
+        <p class="post-title"><center>Owner Information</center></p>
+    
+        <ion-label class="post-title"><ion-icon size="small" name="call"></ion-icon> Contact Number</ion-label>
+        <ion-input id="contact-no" type="number"></ion-input>
+    
+        <ion-label class="post-title"><ion-icon size="small" name="logo-facebook"></ion-icon> Facebook Profile</ion-label>
+        <ion-input id="fb" type="text"></ion-input>
+      </div>
+    </ion-card-content>
+  </ion-card>
+ 
+  <ion-button id="save-post-button" (click)="presentAlert()" expand="block" fill="outline">Save</ion-button>
+ 
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" class="tab-info"> 
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+        <ion-badge>10</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="post" class="tab-info">
+        <ion-icon id="highlight"name="clipboard-outline"></ion-icon>
+        <ion-label id="highlight">Post</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile" class="tab-info">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="logout" class="tab-info">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+

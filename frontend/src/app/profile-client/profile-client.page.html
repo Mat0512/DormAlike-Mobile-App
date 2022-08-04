@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <div id="menu-account">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="menu-content"></ion-menu-button>
+      </ion-buttons>
+      
+      <ion-toolbar id="account">
+        <ion-buttons class="icon1">
+          <button id="prof-box" ion-button [routerLink]="['/profile-client']">
+            <ion-icon id="profile" size="small" name="person-circle-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons class="icon2">
+          <button id="prof-box" ion-button [routerLink]="['/get-started']">
+            <ion-icon id="profile1" size="small" name="log-out-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-client']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1 id="title-prof"><ion-icon size="default" name="person-sharp"></ion-icon> Profile</h1>
+
+  <div class="card-prof-1">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> Name</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">Isaac Newton</ion-text>
+      </div>
+      
+  </div>
+
+  <div class="card-prof-2">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> Username</ion-text>
+      <div class="infos">
+      <ion-text class="text-info">newt</ion-text>
+      </div>
+  </div>
+
+  <div class="card-prof-3">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="call-outline"></ion-icon> Contact Number</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">0933-563-9961</ion-text>
+      </div>
+      
+  </div>
+
+  <div class="card-prof-4">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="mail-outline"></ion-icon> Email</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">isaacnewts@gmail.com</ion-text>
+      </div>
+  </div>
+
+  <div class="card-prof-5">
+      <ion-text class="text-prof"><ion-icon class="icons" size="default" name="eye-off-outline"></ion-icon> Password</ion-text>
+      <div class="infos">
+        <ion-text class="text-info">••••••••</ion-text>
+      </div>     
+  </div>
+
+  <ion-button id="edit-prof" [routerLink]="['/edit-profile-client']" fill="outline">Edit Profile</ion-button>
+</ion-content>

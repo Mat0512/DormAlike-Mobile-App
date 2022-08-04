@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/register-as']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Register </ion-card-title>
+      <div id="note">
+        <ion-label> Create your account. It's free and will only take few minutes.</ion-label>
+    </div>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div class="infoName">
+        <ion-input id="fname" type="text" [(ngModel)] = "form.firstname" required placeholder="First Name"></ion-input>
+        <ion-input id="lname" type="text" [(ngModel)] = "form.lastname" required placeholder="Last Name"></ion-input>
+      </div>
+      <div>
+        <ion-input id="email" type="text" [(ngModel)] = "form.email" required placeholder="Email"></ion-input>
+        <ion-input id="usern" type="text" [(ngModel)] = "form.username" required placeholder="Username"></ion-input>
+        <ion-input id="pw" type="password" [(ngModel)] = "form.password" required placeholder="Password"></ion-input>
+
+        <ion-checkbox id="acceptbox"></ion-checkbox>
+        <ion-label id="accept">I accept the Terms and Conditions & <br> &nbsp; &nbsp; &nbsp; Privacy Policy.</ion-label>
+      </div>
+      
+      <div>
+        <ion-button id="register" [routerLink]="['/login-owner']" size="small" expand="block" fill="outline"> Register </ion-button>
+      </div>
+
+      <div class="container-bottom">
+        <div class="haveAcc-cont">
+          <p id="haveAcc"> Already have an account?</p> 
+        </div>
+        <div class="acct-login-cont">
+          <ion-button id="acct-login" [routerLink]="['/log-in-as']" fill="none">Log in</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

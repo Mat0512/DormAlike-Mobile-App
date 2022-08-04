@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img src="assets/img/dormalike-logo-final.png"></ion-img>
+
+  <div class="title">
+    <h1 id="req"><ion-icon slot="start" size="default" name="bookmarks-outline"></ion-icon> Requests</h1>
+  </div>
+
+  <div class="req-cont-1">
+    <div class="req-text">
+      <ion-text class="n-req"><ion-icon size="small" name="mail-outline"></ion-icon> 1 Reservation Request/s</ion-text>
+    </div>
+    <div class="req-button">
+      <ion-button class="view-req" [routerLink]="['/reservation-request-owner']" fill="outline">View</ion-button>
+    </div>    
+  </div>
+
+  <div class="req-cont-2">
+    <div class="req-text">
+      <ion-text class="n-req"><ion-icon size="small" name="mail-unread-outline"></ion-icon> 1 Pending Request/s</ion-text>
+    </div>
+    <div class="req-button">
+      <ion-button class="view-req" [routerLink]="['/pending-request-owner']" fill="outline">View</ion-button>
+    </div>   
+  </div>
+
+  <div class="req-cont-3">
+    <div class="req-text">
+      <ion-text class="n-req"><ion-icon size="small" name="checkmark-done-outline"></ion-icon> 1 Completed Reservation/s</ion-text>
+    </div>
+    <div class="req-button">
+      <ion-button class="view-req" [routerLink]="['/completed-reservation-owner']" fill="outline">View</ion-button>
+    </div>   
+  </div>
+
+  <div class="title">
+    <h1 id="req"><ion-icon slot="start" size="default" name="podium-outline"></ion-icon> Visitors</h1>
+  </div>
+  
+  <canvas #barCanvas style="position: relative; height:24vh; width:54vw"></canvas>
+
+</ion-content>

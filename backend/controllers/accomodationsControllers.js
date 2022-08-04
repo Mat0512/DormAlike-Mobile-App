@@ -13,18 +13,20 @@ const getAllAccomodations = asyncHandler(async (req, res) => {
 
 const addAccomodation = asyncHandler(async (req, res) => {
     try {
-        console.log(req.body.ownerId);
+        console.log("hello", req.body);
         if (
             !req.body.ownerId ||
+            !req.body.address ||
             !req.body.name ||
             !req.body.category ||
             !req.body.reservationFee ||
-            !req.body.occupancy ||
             !req.body.monthlyFee ||
             !req.body.phone ||
             !req.body.space ||
             !req.body.facilities ||
-            !req.body.description
+            !req.body.description ||
+            !req.body.roomCount ||
+            !req.body.roomAvailable
         ) {
             res.status(400);
             console.log("bug here bthch!");

@@ -1,0 +1,152 @@
+#back {
+    margin-top: 15px;
+    margin-left: 11px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+}
+
+.card {
+    background-color: #0C3B2E;
+    height: 70px;
+}
+
+#house-name {
+    text-align: center;
+    font-family: Cambria;
+    font-weight: bold;
+    color: white;
+    font-size: 27px;
+}
+
+.house-content {
+    background-color: #EEEEEE;
+    border-bottom: 5px solid #0C3B2E;
+}
+
+#location {
+    font-size: 18px;
+    color: black;
+    padding-bottom: 10px;
+}
+
+h1 {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+p {
+    text-align: justify;
+    color: black;
+}
+
+#star-rating {
+    color: gold;
+    margin-top: 15px;
+}
+
+h2 {
+    margin-top: 15px;
+    margin-right: 210px;
+    float: right;
+    color: black;
+}
+
+.house-info {
+    margin-left: 20px;
+    width: 140px;
+    height: 160px;
+    float: left;
+
+}
+.info-title {
+    font-size: 16px;
+    color: black;
+    text-transform: capitalize;
+    margin: 0px;
+    padding: 0px;
+}
+
+.features {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.house-info-cont {
+    margin-right: 20px;
+    width: 140px;
+    height: 160px;
+    float: right;
+    
+}
+.card-facilities {
+    width: 335px;
+    height: 130px;
+    display: inline-block;
+    border-top: 3px solid grey;
+}
+
+.facilities {
+    width: 335px;
+    height: 90px;   
+}
+
+.facility-1 {
+    margin-left: 40px;
+    width: 120px;
+    float: left;
+}
+
+.facility-2 {
+    margin-right: 40px;
+    width: 120px;
+    float: right;
+}
+
+.note {
+    border-left: 3px solid red;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    margin-left: 20px;
+    width: 332px;
+    height:60px;
+}
+
+#note-content {
+    text-align: justify;
+    font-size: 14px;
+    padding: 15px 10px 15px 10px;
+}
+
+.button-cont {
+    width: 375px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.log-reg {
+    width: 160px;
+    height: 50px;
+    float: left;
+    margin-left: 90px;
+}
+
+#log-reg-button {
+    --border-width: 1px;
+    --border-radius: 6px;
+    --border-color: #D15F20;
+    width: 190px;
+    height: 38px;
+    color: #D15F20;
+    font-weight: bold;
+    font-size: 15px;
+}
+

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/profile-client']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1 id="title-prof"><ion-icon size="default" name="person-sharp"></ion-icon> Profile</h1>
+
+  <div class="card-edit-1-2">
+    <div class="text-edit-cont">
+      <ion-label><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> First Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.firstname" required clearInput value="" placeholder="Input first name"></ion-input>
+    </div>     
+
+    <div class="text-edit-cont-1">
+      <ion-label>Last Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.lastname" required clearInput value="" placeholder="Input last name"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-3">
+    <div class="text-edit">
+      <ion-label><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> Username</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.username" required clearInput value="" placeholder="Input username"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-4">
+    <div class="text-edit">
+      <ion-label><ion-icon class="icons" size="default" name="call-outline"></ion-icon> Contact Number</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.contactnumber" required clearInput value="" placeholder="Input contact number"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-5">
+    <div class="text-edit">
+      <ion-label><ion-icon class="icons" size="default" name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.email" required clearInput value="" placeholder="Input email"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-6">
+    <div class="text-edit">
+      <ion-label><ion-icon class="icons" size="default" name="eye-off-outline"></ion-icon> Password</ion-label>
+      <ion-input type="password" [(ngModel)] = "form.password" required placeholder="Input password"></ion-input>
+    </div>
+  </div>
+
+  <ion-button id="edit-prof" (click)="print()" [routerLink]="['/profile-client']" fill="outline">Save Changes</ion-button>
+</ion-content>

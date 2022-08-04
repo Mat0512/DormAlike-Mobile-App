@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="top-cont">
+    <div class="back-cont">
+      <ion-buttons>
+        <button id="back-box" ion-button [routerLink]="['/get-started']">
+          <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+    </div>
+
+    <div class="skip-cont">
+      <ion-button id="skip" [routerLink]="['/home']" fill="outline">Skip</ion-button>
+    </div>
+  </div>
+
+  <ion-card class="regAs">
+    <ion-card-title>Register As</ion-card-title>
+
+    <ion-card-content class="regAsButton">     
+      <ion-button id="clientReg" [routerLink]="['/register-client']" expand="block" fill="outline"><ion-icon name="person-sharp"></ion-icon>Client</ion-button>
+      <ion-button id= "ownerReg" [routerLink]="['/register-owner']" expand="block" fill="outline"><ion-icon name="person-sharp"></ion-icon>Owner</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <div class="bottom-cont">
+    <div class="bottom-cont-1">
+      <p> Already have an account?</p>
+    </div>
+    <div class="bottom-cont-2">
+      <ion-button id="register" [routerLink]="['/log-in-as']" fill="none">Login</ion-button>
+    </div>
+  </div>
+
+  <div class="legalNote">
+    <ion-button id="policy" [routerLink]="['/get-started/privacy-policy-na']" size="small" expand="block" fill="none"> Privacy Policy </ion-button>
+    <ion-button id="terms" [routerLink]="['/get-started/terms-and-conditions-na']" size="small" expand="block" fill="none"> Terms and Conditions </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <div id="menu-account">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="menu-content"></ion-menu-button>
+      </ion-buttons>
+      
+      <ion-toolbar id="account">
+        <ion-buttons class="icon1">
+          <button id="prof-box" ion-button [routerLink]="['/profile-client']">
+            <ion-icon id="profile" size="small" name="person-circle-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons class="icon2">
+          <button id="prof-box" ion-button [routerLink]="['/get-started']">
+            <ion-icon id="profile1" size="small" name="log-out-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+    
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-client']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1>Reserved Property</h1>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-img src="assets/img/house1.jpg"></ion-img><br>
+      <div class="reserved-cont">
+        <p class="reserved-label"><ion-icon name="home-outline"></ion-icon> Reservation in:</p>
+        <p class="reserved-label-1"><ion-icon name="calendar-outline"></ion-icon> Date reserved: </p>
+        <p class="reserved-label-1"><ion-icon name="person-outline"></ion-icon> Owner Name:</p>
+        <p class="reserved-label-1"><ion-icon name="call-outline"></ion-icon> Contact Number:</p>
+        <p class="reserved-label-1"><ion-icon name="mail-outline"></ion-icon> Email:</p>
+      </div>
+      <div class="reserved-cont-2">
+        <p class="reserved-label-3">Bourbon Bliss</p>
+        <p class="reserved-label-2">31-July-2022</p>
+        <p class="reserved-label-2">Thomas Edison</p>
+        <p class="reserved-label-2">0912-345-6789</p>
+        <p class="reserved-label-2">thomased@gmail.com</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

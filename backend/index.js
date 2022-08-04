@@ -4,14 +4,24 @@ const app = express();
 const connectDB = require("./configs/databaseConnection.js");
 const verifyToken = require("./middleware/authMiddleware.js");
 const errorHandler = require("./middleware/errorMiddleware.js");
-
+const path = require("path");
+const cors = require("cors");
 const port = process.env.PORT || 3001;
+
+app.use(cors(require("./configs/corsOption")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/signup", require("./routes/signup.js"));
 app.use("/login", require("./routes/login.js"));
-app.use(verifyToken);
 app.use("/accomodations", require("./routes/api/accomodations.js"));
+app.use("/updatePreference", require("./routes/updatePreference.js"));
+
+//app.use(verifyToken);
+
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname + "/views/index.html"));
+    //__dirname : It will resolve to your project folder.
+});
 app.use("/editAccount", require("./routes/updateUser.js"));
 app.use("/addAccomodation", require("./routes/addAccomodation.js"));
 app.use("/editAccomodation", require("./routes/editAccomodation.js"));

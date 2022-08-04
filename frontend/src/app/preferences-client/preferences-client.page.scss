@@ -1,0 +1,153 @@
+ion-img {
+    display: block;
+    max-width: 170px;
+    max-height: auto;
+    margin: auto;
+}
+
+#back {
+    margin-left: 11px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+    margin-top: 25px;
+}
+
+h1 {
+    font-family: Georgia;
+    padding-left: 19px;
+}
+
+
+.card-home {
+    background-color: #EEEEEE;
+    border-top: 5px solid #c18c5d;
+}
+
+.images {
+    padding-top: 12px;
+    padding-bottom: 0px;
+    width: 450px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.address {
+    text-transform: capitalize;
+    font-family: Calibri;
+    color: brown;
+    font-size: 15px;
+}
+
+.rate-view-details {
+    width: 300px;
+    height: 45px;
+    margin-top: 5px;
+  }
+  
+  .rate-view-details-2 {
+    float: left;
+    margin-top: 9px;
+  }
+  
+  .rate-view-details-3 {
+    float: right;
+  }
+  
+  .rent-starts {
+    font-size: 14px;
+    color: #404040;
+  }
+  
+  .rent-price {
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  .rent-price-2 {
+    float: left;
+    margin-top: 7px;
+  }
+  
+  .rent-price-3 {
+    float: right;
+  }
+  
+  .rent-php {
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Verdana;
+  }
+  
+  #stars{
+    color: gold;
+    width: 17px;
+    height: 17px;
+  }
+
+  .view-property {
+    font-size: 14px;
+    font-weight: bold;
+    width: 160px;
+    height: 37px;
+    --border-radius: 7px;
+    --border-color: white;
+    --background: #013220;
+    --color: white;
+  }
+
+  #account {
+    
+    width: 110px;
+    height: 45px;
+    
+    padding-right: 10px;
+    margin-left: 220px;
+    margin-top: 5px;
+    border: none;
+  }
+
+  .icon1 {
+    float: left;
+  }
+  
+  .icon2 {
+    float: right;
+  }
+
+  #prof-box {
+    background-color: rgba(204, 194, 194, 0.068);
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  
+  #profile {
+    width: 33px;
+    height: 33px;
+    color: #D15F20;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  
+  #profile1 {
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  ion-menu-button {
+    color: black;
+  }
+
+  ion-content {
+    --background: #fcfbf4ab;
+}

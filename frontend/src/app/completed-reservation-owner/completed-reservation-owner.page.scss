@@ -1,0 +1,75 @@
+ion-card {
+    border-left: 3px solid rgb(35, 173, 35);
+    border-bottom: 3px solid rgba(35, 173, 35, 0.144);
+    background-color: rgba(128, 128, 128, 0.021);
+}
+
+#back {
+    margin-left: 11px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+    margin-top: 15px;
+}
+
+.completed-cont {
+    width: 120px;
+    height: 135px;
+    float: left;
+}
+
+.completed-cont-2 {
+    width: 180px;
+    height: 135px;
+    float: right;
+}
+
+.complete-label {
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 15px;
+    font-family: 'Arial Narrow';
+    padding-bottom: 5px;
+}
+
+.complete-label-1 {
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 15px;
+    font-family: 'Arial Narrow';
+}
+
+.complete-label-2 {
+    color: black;
+    font-size: 15px;
+    text-align: right;
+    font-family: Tahoma;
+}
+
+.complete-label-3 {
+    color: black;
+    font-size: 15px;
+    text-align: right;
+    font-family: Tahoma;
+    padding-bottom: 5px;
+}
+
+.tab-info {
+    color: #404040;
+    font-size: 11px;
+}
+
+#highlight {
+    color: #fc6a03;
+}
+
+h1 {
+    font-family: Tahoma;
+    font-size: 23px;
+    margin-left: 15px;
+}
+
+ion-content {
+    --background: #fcfbf4ab;
+}

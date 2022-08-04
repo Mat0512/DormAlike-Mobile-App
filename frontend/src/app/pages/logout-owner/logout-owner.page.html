@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Get Started
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img id="logo" src="assets/img/logo-monochrome.png"></ion-img>
+
+  <div>
+    <p id="caption"> Discover different boarding houses in <br>Alangilan, Batangas City </p>
+    <ion-button id="startReg" [routerLink]="['/register-as']" size="default" expand="block" fill="outline"> Register </ion-button>
+    <ion-button id="startLogin" [routerLink]="['/log-in-as']" size="default" expand="block" fill="outline"> Log in </ion-button>
+    <ion-button id="skip" [routerLink]="['/home']" size="small" expand="block" fill="none"> Skip for now <ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+  </div>
+  <div class="legalNote">
+    <ion-button id="policy" [routerLink]="['/get-started/privacy-policy-na']" size="small" expand="block" fill="none"> Privacy Policy </ion-button>
+    <ion-button id="terms" [routerLink]="['/get-started/terms-and-conditions-na']" size="small" expand="block" fill="none"> Terms and Conditions </ion-button>
+  </div>
+
+</ion-content>

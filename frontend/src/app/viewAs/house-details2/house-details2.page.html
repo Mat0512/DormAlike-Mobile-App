@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>House Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-owner/tabs/post-owner']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+  
+  <ion-card class="card">
+    <h1 id="house-name">Hotel De La Cruise</h1>
+  </ion-card>
+
+  <ion-card class="house-content">
+    <ion-img src="assets/img/house2.jpg"></ion-img>
+
+    <ion-card-content>
+      <ion-card-subtitle id="location"><ion-icon size="large" name="pin"></ion-icon>Alangilan, Batangas City</ion-card-subtitle>
+      <h1>Description</h1>
+      <p>Hotel De La Cruise is a budget-friendly co-living space dedicated for students attending schools in Alangilan, Batangas City. Its semi-furnished rooms for rent are hassle-free and conveniently simple — perfect for roomies looking for a home.</p>
+
+      <ion-icon id="star-rating" size="small" name="star"></ion-icon><h2>3.5 rating</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="house-info">
+    <ion-card-subtitle class="info-title">Category</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="list-outline"></ion-icon> Room Rent</p><br>
+
+    <ion-card-subtitle class="info-title">Reservation Fee</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="pricetags-outline"></ion-icon> PHP 1,000</p><br>
+
+    <ion-card-subtitle class="info-title">Monthly Fee</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="cash-outline"></ion-icon> PHP 2,000</p><br>
+  </div>
+
+  <div class="house-info-cont">
+    <ion-card-subtitle class="info-title">Room Count</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="bed-outline"></ion-icon> 5 rooms</p><br>
+
+    <ion-card-subtitle class="info-title">Room Available</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="bed"></ion-icon> 2 rooms</p><br>
+
+    <ion-card-subtitle class="info-title">Space</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="home-outline"></ion-icon> 200 square feet</p><br>
+  </div>
+
+  <ion-card class="card-facilities">
+    <ion-card-content>
+      <div class="facilities">
+        <ion-card-subtitle class="info-title">Facilities</ion-card-subtitle>
+        <div class="facility-1">
+          <p class="features"><ion-icon size="small" name="fast-food"></ion-icon> Kitchen</p>
+          <p class="features"><ion-icon size="small" name="water"></ion-icon> Laundry Area</p>
+        </div>
+        <div class="facility-2">
+          <p class="features"><ion-icon size="small" name="camera"></ion-icon> CCTV</p>
+          <p class="features"><ion-icon size="small" name="body"></ion-icon> Restroom</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="owner">
+    <ion-card-subtitle class="info-title">Owner's Contact Details</ion-card-subtitle>
+    <p class="info-owner"><ion-icon size="small" name="call"></ion-icon> 0985-523-9567</p>
+    <p class="info-owner"><ion-icon size="small" name="logo-facebook"></ion-icon> Walter Clint</p>
+    <p class="info-owner"><ion-icon size="small" name="mail"></ion-icon> walterclint@gmail.com</p>
+  </div>
+
+  
+
+  
+  
+
+</ion-content>

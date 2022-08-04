@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-owner']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1>Completed Reservation/s</h1>
+  
+  <ion-card>
+    <ion-card-content>
+      <div class="completed-cont">
+        <p class="complete-label"><ion-icon name="home-outline"></ion-icon> Reservation in:</p>
+        <p class="complete-label-1"><ion-icon name="calendar-outline"></ion-icon> Date approved: </p>
+        <p class="complete-label-1"><ion-icon name="person-outline"></ion-icon> Name:</p>
+        <p class="complete-label-1"><ion-icon name="call-outline"></ion-icon> Contact Number:</p>
+        <p class="complete-label-1"><ion-icon name="mail-outline"></ion-icon> Email:</p>
+      </div>
+      <div class="completed-cont-2">
+        <p class="complete-label-3">Bourbon Bliss</p>
+        <p class="complete-label-2">31-July-2022</p>
+        <p class="complete-label-2">Isaac Newton</p>
+        <p class="complete-label-2">0912-345-6789</p>
+        <p class="complete-label-2">isaacnewts@gmail.com</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" class="tab-info">
+        <ion-icon id="highlight" name="home-outline"></ion-icon>
+        <ion-label id="highlight">Home</ion-label>
+        <ion-badge>10</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="post" class="tab-info">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Post</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile" class="tab-info">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="logout" class="tab-info">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

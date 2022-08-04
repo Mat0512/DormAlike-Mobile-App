@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DormAlike</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-owner/tabs/profile-owner']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <h1 id="title-prof"><ion-icon size="default" name="person-sharp"></ion-icon> Profile</h1>
+
+  <div class="card-edit-1-2">
+    <div class="text-edit-cont">
+      <ion-label class="label"><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> First Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.firstname" clearInput value="" placeholder="Input first name"></ion-input>
+    </div>     
+
+    <div class="text-edit-cont-1">
+      <ion-label class="label">Last Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.lastname" clearInput value="" placeholder="Input last name"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-3">
+    <div class="text-edit">
+      <ion-label class="label"><ion-icon class="icons" size="default" name="pencil-outline"></ion-icon> Username</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.username" clearInput value="" placeholder="Input username"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-4">
+    <div class="text-edit">
+      <ion-label class="label"><ion-icon class="icons" size="default" name="call-outline"></ion-icon> Contact Number</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.contactnumber" clearInput value="" placeholder="Input contact number"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-5">
+    <div class="text-edit">
+      <ion-label class="label"><ion-icon class="icons" size="default" name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input type="text" [(ngModel)] = "form.email" clearInput value="" placeholder="Input email"></ion-input>
+    </div>
+  </div>
+
+  <div class="card-edit-6">
+    <div class="text-edit">
+      <ion-label class="label"><ion-icon class="icons" size="default" name="eye-off-outline"></ion-icon> Password</ion-label>
+      <ion-input type="password" [(ngModel)] = "form.password" placeholder="Input password"></ion-input>
+    </div>
+  </div>
+
+  <ion-button id="edit-prof" (click)="print()"[routerLink]="['/home-owner/tabs/profile-owner']" fill="outline">Save Changes</ion-button>
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" class="tab-info">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+        <ion-badge>10</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="post" class="tab-info">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Post</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile" class="tab-info">
+        <ion-icon id="highlight" name="person-circle-outline"></ion-icon>
+        <ion-label id="highlight">Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="logout" class="tab-info">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

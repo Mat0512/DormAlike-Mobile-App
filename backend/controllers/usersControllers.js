@@ -100,11 +100,62 @@ const loginUser = asyncHandler(async (req, res) => {
         console.log("hello");
 
         res.status(200).json({
+            firstname: matchedUser.firstname,
+            lastname: matchedUser.lastname,
             username: matchedUser.username,
+            phone: matchedUser.phone,
+            email: matchedUser.email,
             preference: matchedUser.preference,
             reservation: matchedUser.reservation,
             token: matchedUser.token,
         });
+    } catch (err) {
+        throw new Error(err);
+    }
+});
+
+const updatePreference = asyncHandler(async (req, res) => {
+    try {
+        console.log("data: ", req.body);
+        if (!req.body.id) {
+            res.status(400);
+            throw new Error(
+                "Can't update preference. user Id or username is missing"
+            );
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(
+            req.userId || req.body.id,
+            { $push: { preference: req.body.accomodationid } },
+            {
+                returnDocument: "after",
+            }
+        );
+
+        if (!updatedUser) {
+            res.status(400);
+            throw new Error("user not updated");
+        }
+        res.status(200).json(updatedUser);
+    } catch (err) {
+        throw new Error(err);
+    }
+});
+
+const getMyData = asyncHandler(async (req, res) => {
+    try {
+        if (!req.userid) {
+            re.status(400);
+            throw new Error("user id is missing");
+        }
+
+        const userData = await User.findById(req.userId)
+            .select("firstname lastname email phone")
+            .exec();
+        console.log(preference);
+        userData.token = createToken(matchedUser.id);
+
+        res.status(200).json(userData);
     } catch (err) {
         throw new Error(err);
     }
@@ -118,4 +169,5 @@ module.exports = {
     createUser,
     editUser,
     loginUser,
+    updatePreference,
 };

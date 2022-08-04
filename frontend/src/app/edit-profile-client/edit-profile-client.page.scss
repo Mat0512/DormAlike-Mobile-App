@@ -1,0 +1,121 @@
+ion-img {
+    display: block;
+    max-width: 170px;
+    max-height: auto;
+    margin: auto;
+}
+
+ion-label {
+    font-size: 17px;
+    margin-left: 10px;   
+}
+
+ion-input {
+    margin-left: 15px; 
+    font-size: 14px;
+}
+
+#back {
+    margin-left: 11px;
+    width: 40px;
+    height: 40px;
+}
+
+#back-box {
+    background-color: white;
+    margin-top: 15px;
+}
+
+.icons {
+    width: 21px;
+    height: 21px;
+    padding-top: 4px;
+    font-family: Tahoma;
+}
+
+#title-prof {
+     font-family: Verdana;
+     margin-left: 20px;
+     color: rgb(185, 105, 29);
+}
+
+.card-edit-1-2 {
+    width: 325px;
+    height: 75px;
+    background-color: #f8f6f6;
+    border-radius: 7px;
+    margin-left: 25px;
+    border-bottom: 1px solid black;
+    margin-top: 18px;
+}
+
+.text-edit-cont {
+    float: left;
+    width: 150px;
+}
+
+.text-edit-cont-1 {
+    float: right;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.card-edit-3 {
+    display: inline-block;
+    width: 325px;
+    height: 65px;
+    margin: 15px 0px 12px 25px;
+    background-color: #f8f6f6;
+    border-radius: 7px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid black;
+}
+
+.card-edit-4 {
+    width: 325px;
+    height: 65px;
+    margin-left: 25px;
+    margin-bottom: 12px;
+    background-color: #f8f6f6;
+    border-radius: 7px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid black;
+}
+
+.card-edit-5 {
+    width: 325px;
+    height: 65px;
+    margin-left: 25px;
+    margin-bottom: 12px;
+    background-color: #f8f6f6;
+    border-radius: 7px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid black;
+}
+
+.card-edit-6 {
+    width: 325px;
+    height: 65px;
+    margin-left: 25px;
+    background-color: #f8f6f6;
+    border-radius: 7px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid black;
+}
+
+#edit-prof {
+    width: 150px;
+    height: 35px;
+    margin-top: 30px;
+    margin-left: 115px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #FF4F1F;
+    --border-color: #FF4F1F;
+}
+
+ion-content {
+    --background: #fcfbf4ab;
+}
