@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>House Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <button id="back-box" ion-button [routerLink]="['/home-client']">
+      <ion-icon id="back" name="chevron-back-outline"></ion-icon>
+    </button>
+  </ion-buttons>
+  
+  <ion-card class="card">
+    <h1 id="house-name">The Palazzo</h1>
+  </ion-card>
+
+  <ion-card class="house-content">
+    <ion-img src="assets/img/house5.jpg"></ion-img>
+
+    <ion-card-content>
+      <ion-card-subtitle id="location"><ion-icon size="large" name="pin"></ion-icon>Alangilan, Batangas City</ion-card-subtitle>
+      <h1>Description</h1>
+      <p>The Palazzo is a semi-furnished dorm for rent in Alangilan near SM, offering rooms for either 4 or 6 roomies to share. Located in Alangilan as one of the dorms near the BatStateU Alangilan, the concept of the dorm makes it the ideal co-living space for roomies excited to start their student co-living experience.</p>
+
+      <ion-icon id="star-rating" size="small" name="star"></ion-icon><h2>3.0 rating</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="house-info">
+    <ion-card-subtitle class="info-title">Category</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="list-outline"></ion-icon> Room Rent</p><br>
+
+    <ion-card-subtitle class="info-title">Reservation Fee</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="pricetags-outline"></ion-icon> PHP 2,000</p><br>
+
+    <ion-card-subtitle class="info-title">Monthly Fee</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="cash-outline"></ion-icon> PHP 3,000</p><br>
+  </div>
+
+  <div class="house-info-cont">
+    <ion-card-subtitle class="info-title">Room Count</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="bed-outline"></ion-icon> 7 rooms</p><br>
+
+    <ion-card-subtitle class="info-title">Room Available</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="bed"></ion-icon> 4 rooms</p><br>
+
+    <ion-card-subtitle class="info-title">Space</ion-card-subtitle>
+    <p class="features"><ion-icon size="small" name="home-outline"></ion-icon> 500 square feet</p><br>
+  </div>
+
+  <ion-card class="card-facilities">
+    <ion-card-content>
+      <div class="facilities">
+        <ion-card-subtitle class="info-title">Facilities</ion-card-subtitle>
+        <div class="facility-1">
+          <p class="features"><ion-icon size="small" name="wifi"></ion-icon> Wifi</p>
+          <p class="features"><ion-icon size="small" name="camera"></ion-icon> CCTV</p>
+          <p class="features"><ion-icon size="small" name="car-sport"></ion-icon> Parking</p>
+        </div>
+        <div class="facility-2">
+          <p class="features"><ion-icon size="small" name="fast-food"></ion-icon> Kitchen</p>
+          <p class="features"><ion-icon size="small" name="water"></ion-icon> Laundry Area</p>
+          <p class="features"><ion-icon size="small" name="book"></ion-icon> Study Area</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="owner">
+    <ion-card-subtitle class="info-title">Owner's Contact Details</ion-card-subtitle>
+    <p class="info-owner"><ion-icon size="small" name="call"></ion-icon> 0954-532-9851</p>
+    <p class="info-owner"><ion-icon size="small" name="logo-facebook"></ion-icon> Kyla Tingey</p>
+    <p class="info-owner"><ion-icon size="small" name="mail"></ion-icon> tingeykayla@gmail.com</p>
+  </div>
+
+  <div class="note">
+    <p id="note-content">By clicking 'Reserve' you have already read and understand the Terms and Conditions.</p>
+  </div>
+
+  <div class="button-cont">
+    <div class="prefer">
+      <ion-button id="prefer-button" [routerLink]="['/preferences-client']" expand="block" fill="outline">Add to Preferences</ion-button>
+    </div>
+    <div class="reserve">
+      <ion-button (click)="presentAlert()" id="reserve-button" expand="block" fill="outline">Reserve</ion-button>
+    </div>
+  </div>
+
+  
+
+  
+  
+
+</ion-content>
+

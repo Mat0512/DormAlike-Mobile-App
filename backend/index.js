@@ -14,10 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/signup", require("./routes/signup.js"));
 app.use("/login", require("./routes/login.js"));
 app.use("/accomodations", require("./routes/api/accomodations.js"));
-app.use("/updatePreference", require("./routes/updatePreference.js"));
 
 //app.use(verifyToken);
 
+app.use("/updatePreference", require("./routes/updatePreference.js"));
+app.use("/getPreference", require("./routes/getPreference.js"));
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname + "/views/index.html"));
     //__dirname : It will resolve to your project folder.

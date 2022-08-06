@@ -15,24 +15,23 @@
     <ion-card-header>
       <ion-card-title id="login">Login</ion-card-title>
     </ion-card-header>
-    <form>
+  
     <ion-card-content class="userInput">
       <div class="userName">
         <ion-icon class="icon" size="large" name="person-sharp"></ion-icon> 
-        <ion-input id="name" type="text"  name="username" [(ngModel)] = "username" required placeholder="Username"></ion-input>
+        <ion-input id="name" type="text" [(ngModel)] = "form.username" required placeholder="Username"></ion-input>
       </div>
       <div class="userPass">
         <ion-icon class="icon" size="large" name="lock-closed"></ion-icon> 
-        <ion-input id="pass" type="password" name="password" [(ngModel)] = "password" required placeholder="Password"></ion-input>
+        <ion-input id="pass" type="password" [(ngModel)] = "form.password" required placeholder="Password"></ion-input>
       </div>
       
       <div class="rememberMe">
-        <ion-button id="logIn" (click)="submitCredentials()"  size="small" expand="block" fill="outline">Log in</ion-button>
+        <ion-button id="logIn" (click)="print()" [routerLink]="['/home-client']" size="small" expand="block" fill="outline">Log in</ion-button>
       </div>
     </ion-card-content>
-  </form>
   </ion-card>
   <p id="or">or</p>
   <p id="new">New to DormALike?</p>
-  <ion-button id="register" [routerLink]="['/register-client']" expand="default" fill="outline">Register for Free</ion-button>
+  <ion-button id="register" [routerLink]="['/register-as']" expand="default" fill="outline">Register for Free</ion-button>
 </ion-content>

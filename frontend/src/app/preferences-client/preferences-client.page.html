@@ -58,6 +58,32 @@
     </ion-card-content>
   </ion-card>
 
+  <ion-card class="card-home">
+    <ion-img class="images" src="assets/img/house2.jpg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Hotel De La Cruise</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>Street Name, Alangilan, Batangas City</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">Php 2,000</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> 3.5 Homey-rating</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
 
 
 </ion-content>

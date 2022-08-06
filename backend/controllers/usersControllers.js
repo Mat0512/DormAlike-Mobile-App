@@ -74,7 +74,7 @@ const editUser = asyncHandler(async (req, res) => {
 const loginUser = asyncHandler(async (req, res) => {
     try {
         const { username, password } = req.body;
-
+        console.log("loginuser");
         if (!username || !password) {
             res.status(400);
             throw new Error("username or password is missing");
@@ -100,6 +100,7 @@ const loginUser = asyncHandler(async (req, res) => {
         console.log("hello");
 
         res.status(200).json({
+            id: matchedUser.id,
             firstname: matchedUser.firstname,
             lastname: matchedUser.lastname,
             username: matchedUser.username,
@@ -109,6 +110,24 @@ const loginUser = asyncHandler(async (req, res) => {
             reservation: matchedUser.reservation,
             token: matchedUser.token,
         });
+    } catch (err) {
+        throw new Error(err);
+    }
+});
+
+const getPreference = asyncHandler(async (req, res) => {
+    try {
+        console.log("body", req.body);
+        if (!req.body.id) {
+            throw new Error("missing id in get preference");
+        }
+
+        const userPreference = await User.findById(req.body.id)
+            .select("preference")
+            .populate("preference")
+            .exec();
+
+        res.status(200).json(userPreference);
     } catch (err) {
         throw new Error(err);
     }
@@ -125,12 +144,14 @@ const updatePreference = asyncHandler(async (req, res) => {
         }
 
         const updatedUser = await User.findByIdAndUpdate(
-            req.userId || req.body.id,
-            { $push: { preference: req.body.accomodationid } },
+            req.userId,
+            { $push: { preference: req.body.accomodationId } },
             {
                 returnDocument: "after",
             }
-        );
+        )
+            .populate("preference")
+            .exec();
 
         if (!updatedUser) {
             res.status(400);
@@ -170,4 +191,5 @@ module.exports = {
     editUser,
     loginUser,
     updatePreference,
+    getPreference,
 };

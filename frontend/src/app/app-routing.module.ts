@@ -103,7 +103,42 @@ const routes: Routes = [
     path: 'completed-reservation-owner',
     loadChildren: () => import('./completed-reservation-owner/completed-reservation-owner.module').then( m => m.CompletedReservationOwnerPageModule)
   },
-  
+  {
+    path: 'house-details2',
+    loadChildren: () => import('./house-details2/house-details2.module').then( m => m.HouseDetails2PageModule)
+  },
+  {
+    path: 'house-details3',
+    loadChildren: () => import('./house-details3/house-details3.module').then( m => m.HouseDetails3PageModule)
+  },
+  {
+    path: 'house-details4',
+    loadChildren: () => import('./house-details4/house-details4.module').then( m => m.HouseDetails4PageModule)
+  },
+  {
+    path: 'house-details5',
+    loadChildren: () => import('./house-details5/house-details5.module').then( m => m.HouseDetails5PageModule)
+  },
+  {
+    path: 'house-details6',
+    loadChildren: () => import('./house-details6/house-details6.module').then( m => m.HouseDetails6PageModule)
+  },
+  {
+    path: 'house-details7',
+    loadChildren: () => import('./house-details7/house-details7.module').then( m => m.HouseDetails7PageModule)
+  },
+  {
+    path: 'house-details8',
+    loadChildren: () => import('./house-details8/house-details8.module').then( m => m.HouseDetails8PageModule)
+  },
+  {
+    path: 'house-details9',
+    loadChildren: () => import('./house-details9/house-details9.module').then( m => m.HouseDetails9PageModule)
+  },
+  {
+    path: 'house-details10',
+    loadChildren: () => import('./house-details10/house-details10.module').then( m => m.HouseDetails10PageModule)
+  },
   {
     path: 'reserved-property-client',
     loadChildren: () => import('./reserved-property-client/reserved-property-client.module').then( m => m.ReservedPropertyClientPageModule)

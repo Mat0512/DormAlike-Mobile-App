@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-import { Accomodation } from '../tsInterface/Accomodation';
-import { UserService } from '../services/user.service';
-import { LocalstorageService } from '../services/localstorage.service';
-import { User } from '../tsInterface/User';
+
 
 @Component({
   selector: 'app-house-details',
@@ -13,15 +10,8 @@ import { User } from '../tsInterface/User';
 })
 export class HouseDetailsPage implements OnInit {
 
-  constructor(
-                private alertController: AlertController,
-                private route: ActivatedRoute, private userService : UserService, 
-                private localStorageService: LocalstorageService
-             ) {}
-             
+  constructor(private alertController: AlertController, private route: ActivatedRoute) {}
   accomodation: any;
-  userReservationList: Accomodation[];
-  
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Are you sure that you want to reserve a room in this property?',
@@ -29,33 +19,23 @@ export class HouseDetailsPage implements OnInit {
       buttons: [
         {
           text: 'No',
-          cssClass: 'alert-button-cancel',
-          handler: () => {
-            console.log("noooo")
-          }
+          cssClass: 'alert-button-cancel'
         },
         {
           text: 'Yes',
-          cssClass: 'alert-button-confirm',
-          handler: () => {
-            console.log("yessss")
-
-          }
-        },
-  
+          cssClass: 'alert-button-confirm'
+        }
       ]
     });
 
     await alert.present();
   }
 
-  // addToPrefence(accomodationId): void{
-  //   this.userService.updateUser({preference: })
-  // }
-
   ngOnInit() {
     this.route.queryParams
     .subscribe(accomodationData => {
+      console.log(accomodationData)
+
       this.accomodation = {
         ownedBy: accomodationData.ownedBy,
         name: accomodationData.name,

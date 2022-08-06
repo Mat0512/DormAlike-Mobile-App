@@ -60,10 +60,10 @@
   </div>
 
   
-  <ion-card class="card-home" *ngFor = "let info of accomodations |filter:searchTerm">
+  <ion-card class="card-home" *ngFor = "let info of house |filter:searchTerm">
     <ion-img class="images" [src]="info.houseimg"></ion-img>
     <ion-card-content>
-        <ion-card-title>{{info.name}}</ion-card-title>
+        <ion-card-title>{{info.housename}}</ion-card-title>
         <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
         
         <div class="rent-price">
@@ -80,11 +80,1286 @@
             <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
           </div>
         <div class="rate-view-details-3">
-          <ion-button class="view-property" [routerLink]="['/house-details']" [queryParams]="info"  size="small" shape="round" fill="outline">View Property</ion-button>
+          <ion-button class="view-property" [routerLink]="['/house-details']" [queryParams]="info" size="small" shape="round" fill="outline">View Property</ion-button>
         </div>
       </div>
     </ion-card-content>
   </ion-card>
+
+  <!-- <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details2']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <<ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details3']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details4']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details5']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details6']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details7']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details8']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details9']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-home" *ngFor = "let info of house">
+    <ion-img class="images" [src]="info.houseimg"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{info.housename}}</ion-card-title>
+      <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+      
+      <div class="rent-price">
+        <div class="rent-price-2">
+          <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+        </div>
+        <div class="rent-price-3">
+          <h2 class="rent-php">{{info.rent}}</h2>
+        </div>
+      </div>
+
+      <div class="rate-view-details">
+        <div class="rate-view-details-2">
+          <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+        </div>
+        <div class="rate-view-details-3">
+          <ion-button class="view-property" [routerLink]="['/house-details10']" size="small" shape="round" fill="outline">View Property</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details11']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details12']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details13']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details14']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details15']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details16']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details17']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details18']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details19']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details20']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details21']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details22']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details23']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details24']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details25']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details26']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details27']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details28']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details29']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details30']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details31']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details32']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details33']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details34']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details35']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details36']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details37']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details38']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details39']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details40']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+ 
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details41']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details42']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details43']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details44']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details45']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details46']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details47']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details48']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details49']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-home" *ngFor = "let info of house">
+      <ion-img class="images" [src]="info.houseimg"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{info.housename}}</ion-card-title>
+        <ion-card-subtitle class="address"><ion-icon size="small" name="location-sharp"></ion-icon>{{info.address}}</ion-card-subtitle>
+        
+        <div class="rent-price">
+          <div class="rent-price-2">
+            <ion-card-subtitle class="rent-starts">Rent starts at</ion-card-subtitle>
+          </div>
+          <div class="rent-price-3">
+            <h2 class="rent-php">{{info.rent}}</h2>
+          </div>
+        </div>
+  
+        <div class="rate-view-details">
+          <div class="rate-view-details-2">
+            <h6 id="rating"><ion-icon id="stars" name="star"></ion-icon> {{info.rating}}</h6>
+          </div>
+          <div class="rate-view-details-3">
+            <ion-button class="view-property" [routerLink]="['/house-details/house-details50']" size="small" shape="round" fill="outline">View Property</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card> -->
+  
 
   <ion-button id="scroll-up" (click)="scrollToTop()" expand="block">
     <ion-icon id="arrow" name="arrow-up-circle-sharp"></ion-icon>
